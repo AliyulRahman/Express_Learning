@@ -21,7 +21,7 @@ app.use('/api', userRoutes);
 
 // Render homepage view
 app.get('/', (req, res) => {
-    res.render('index', { title: 'User Portal' });
+    res.render('index', { title: 'Login Portal' });
 });
 
 // Start server
