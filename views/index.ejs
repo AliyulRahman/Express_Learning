@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 2rem;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #2e86de;
+        }
+
+        form {
+            margin-top: 2rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            max-width: 400px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin: 0.5rem 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #2e86de;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1b4f72;
+        }
+    </style>
+</head>
+<body>
+    <h1><%= title %></h1>
+    <p>Submit user information using the form below:</p>
+
+    <form action="/api/users" method="POST">
+        <label for="name">Name:</label><br/>
+        <input type="text" id="name" name="name" required><br/>
+
+        <label for="email">Email:</label><br/>
+        <input type="email" id="email" name="email" required><br/>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
